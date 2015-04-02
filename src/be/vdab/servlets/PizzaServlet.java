@@ -1,9 +1,7 @@
 package be.vdab.servlets;
 
 import java.io.IOException;
-import java.math.BigDecimal;
-import java.util.LinkedHashMap;
-import java.util.Map;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.servlet.ServletException;
@@ -13,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import be.vdab.dao.PizzaDAO;
-import be.vdab.entities.Pizza;
+
 
 /**
  * Servlet implementation class PizzaServlet
