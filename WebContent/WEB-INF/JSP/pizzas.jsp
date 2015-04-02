@@ -16,11 +16,11 @@
 		</c:forEach>
 	</h1>
 	<ul class="zebra">
-		<c:forEach var='entry' items='${pizzas}'>
-			<li>${entry.key}:<c:out value='${entry.value.naam}'/> ${entry.value.prijs}&euro;
-				${entry.value.pikant ? "pikant" : "niet pikant"}
+		<c:forEach var='pizza' items='${pizzas}'>
+			<li>${pizza.id}:<c:out value='${pizza.naam}'/> ${pizza.prijs}&euro;
+				${pizza.pikant ? "pikant" : "niet pikant"}
 				<c:url value='/pizzas/detail.htm' var='detailURL'>
-					<c:param name='id' value='${entry.key}'/>
+					<c:param name='id' value='${pizza.id}'/>
 				</c:url>
 				<a href='${detailURL}'>Detail</a>
 			</li>
