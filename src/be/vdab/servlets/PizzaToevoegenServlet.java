@@ -66,8 +66,8 @@ public class PizzaToevoegenServlet extends HttpServlet {
 				fotoPart.write(String.format("%s/%d.jpg", pizzaFotosPad,
 						pizza.getId()));
 			}
-			response.sendRedirect(String.format(REDIRECT_URL,
-					request.getContextPath()));
+			response.sendRedirect(response.encodeRedirectURL(
+					String.format(REDIRECT_URL, request.getContextPath())));
 		} else {
 			request.setAttribute("fouten", fouten);
 			request.getRequestDispatcher(VIEW).forward(request, response);
