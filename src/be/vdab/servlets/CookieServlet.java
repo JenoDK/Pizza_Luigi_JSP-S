@@ -44,8 +44,7 @@ public class CookieServlet extends HttpServlet {
 	 */
 	@Override
 	protected void doPost(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");
+			HttpServletResponse response) throws ServletException, IOException {		
 		Cookie cookie = new Cookie("naam", URLEncoder.encode(
 				request.getParameter("naam"), "UTF-8"));
 		cookie.setMaxAge(60 * 30); // 60 seconden x 30 = 30 minuten
