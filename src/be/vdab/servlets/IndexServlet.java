@@ -36,6 +36,8 @@ public class IndexServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 	throws ServletException, IOException {
+		request.setAttribute("nu", Calendar.getInstance().getTime());
+		request.setAttribute("aantalPizzasVerkocht", 23000);
 		int uur = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
 		request.setAttribute("begroeting", uur >= 6 && uur < 12 ? "Goede morgen" :
 		uur >= 12 && uur < 18 ? "Goede middag": "Goede avond");
